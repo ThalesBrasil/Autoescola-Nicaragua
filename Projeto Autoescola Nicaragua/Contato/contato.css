@@ -1,0 +1,371 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+}
+
+.login-cadastro {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+}
+
+ul.menu > li {
+    float: left;
+}
+
+ul.menu > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.menu > li a:hover {
+    background-color: #555;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu li:hover ul.submenu {
+    display: block;
+}
+
+ul.submenu li {
+    float: none;
+}
+
+ul.submenu li a {
+    padding: 10px;
+    text-align: left;
+}
+
+ul.submenu li a:hover {
+    background-color: #555;
+}
+
+.info {
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-media {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-media h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.social-media ul li a i {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.social-media ul li a:hover {
+    color: #007bff;
+}
+
+.social-media ul li a:hover i {
+    color: #007bff; 
+}
+
+.carousel-container {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.carousel {
+    display: flex;
+    width: 500%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 20%;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.acessibilidade {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.acessibilidade button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.acessibilidade button:hover {
+    background-color: #555;
+}
+
+.acessibilidade button.dark-mode {
+    background-color: #fff;
+    color: #121212;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.user-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#logout-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+#logout-options {
+    display: none;
+    margin-top: 5px;
+}
+
+#logout-btn {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .login-cadastro {
+        position: static;
+        margin-top: 30px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .acessibilidade {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .acessibilidade button {
+        margin: 5px;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin: 40px 0;
+        width: 100%;
+    }
+
+    .user-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    ul.menu {
+        width: 100%;
+        padding-left: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .carousel-container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carousel-text {
+        font-size: 1.5rem;
+    }
+
+    .social-media ul li {
+        display: inline-block;
+        margin: 10px;
+    }
+}

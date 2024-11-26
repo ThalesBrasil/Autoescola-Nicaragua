@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Autoescola Nicarágua</title>
+    <link rel="stylesheet" href="contato.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="../Acesso/acesso.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Autoescola Nicarágua</h1>
+        <div class="user-area">
+            <div class="login-cadastro">
+                <a class="btn" href="../Login/login.html">Login</a>
+                <a class="btn" href="../Cadastro/cadastro.html">Cadastro</a>
+            </div>
+            <div id="user-info" class="user-info" style="display: none;">
+                <span id="user-name"></span>
+                <button id="logout-toggle" style="cursor: pointer;">&#9660;</button>
+                <div id="logout-options" style="display: none;">
+                    <button id="logout-btn">Deslogar</button>
+                </div>
+            </div>
+        </div>
+        <div class="acessibilidade">
+            <button id="modo-escuro-btn">Modo Escuro</button>
+            <button id="aumentar-fonte-btn">A+</button>
+            <button id="diminuir-fonte-btn">A-</button>
+        </div>
+    </header>
+
+    <nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="../Menu/menu.html">Início</a></li>
+                <li><a href="#">Cursos</a>
+                    <ul class="submenu">
+                        <li><a href="../Cursos/teorico.html">Teórico</a></li>
+                        <li><a href="../Cursos/pratico.html">Prático</a></li>
+                        <li><a href="../Cursos/simulador.html">Simulador</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <div class="content">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações ou dúvidas sobre nossos cursos e serviços. Estamos à disposição para ajudá-lo!</p>
+
+        <div class="contact-info">
+            <h3>Telefone</h3>
+            <p><strong>Telefone: (21) 2590-6746</strong></p>
+        </div>
+
+        <div class="address">
+            <h3>Endereço</h3>
+            <p>R. Nicarágua, 175 - Penha, Rio de Janeiro - RJ, 21020-050</p>
+        </div>
+        
+        <div class="carousel-container">
+            <div class="carousel-text">
+                Alunos Aprovados
+            </div>
+            <div class="carousel">
+                <img src="../Contato/Alunos/462308966_2287046218305181_4141954582129038076_n.jpg" alt="Aluno aprovado 1">
+                <img src="../Contato/Alunos/462511816_2287046224971847_1223746105400859820_n.jpg" alt="Aluno aprovado 2">
+                <img src="../Contato/Alunos/462597644_2287046221638514_2286306264620756298_n.jpg" alt="Aluno aprovado 3">
+                <img src="../Contato/Alunos/462621488_2287046211638515_7128090646924939579_n.jpg" alt="Aluno aprovado 4">
+                <img src="../Contato/Alunos/68541884_925842601092223_7747477688897503232_n.jpg" alt="Aluno aprovado 5">
+            </div>
+        </div> 
+        
+        <div class="social-media">
+            <h3>Redes Sociais</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/p/Auto-escola-Nicar%C3%A1gua-100054225951146/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/autoescolanicaragua" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+    <br><br>
+    
+    <footer>
+        <p>&copy; 2024 Autoescola Nicarágua. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="../Acessibilidade/acessibilidade.js"></script>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % totalImages; 
+            images[currentIndex].style.display = 'block'; 
+        }
+
+        function initCarousel() {
+            images.forEach((img, index) => {
+                img.style.display = index === 0 ? 'block' : 'none'; 
+            });
+            setInterval(showNextImage, 3000);
+        }
+
+        initCarousel();
+    </script>
+</body>
+</html>

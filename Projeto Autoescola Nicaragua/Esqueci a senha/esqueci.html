@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci a Senha</title>
+    <link rel="stylesheet" href="esqueci.css">
+       <script src="../Acesso/acesso.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Autoescola Nicarágua</h1>
+        <div class="user-area">
+            <div class="login-cadastro">
+                <a class="btn" href="../Login/login.html">Login</a>
+                <a class="btn" href="../Cadastro/cadastro.html">Cadastro</a>
+        </div>
+        <div class="acessibilidade">
+            <button id="modo-escuro-btn">Modo Escuro</button>
+            <button id="aumentar-fonte-btn">A+</button>
+            <button id="diminuir-fonte-btn">A-</button>
+        </div>
+    </header>
+
+    <nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="../Menu/menu.html">Início</a></li>
+                <li><a href="#">Cursos</a>
+                    <ul class="submenu">
+                        <li><a href="../Cursos/teorico.html">Teórico</a></li>
+                        <li><a href="../Cursos/pratico.html">Prático</a></li>
+                        <li><a href="../Cursos/simulador.html">Simulador</a></li>
+                    </ul>
+                <li><a href="../Contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <div class="container">
+        <h2>Esqueci a Senha</h2>
+        <p>Insira seu endereço de e-mail e nós lhe enviaremos instruções para redefinir sua senha.</p>
+        <form action="#">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+            <button type="submit">Enviar</button>
+        </form>
+        <a href= "../Login/login.html" class="back-link">Voltar para o login</a>
+    </div>
+    <script src="../Acessibilidade/acessibilidade.js"></script>
+    <br><br>
+    <footer>
+        <p>&copy; 2024 Autoescola Nicarágua. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

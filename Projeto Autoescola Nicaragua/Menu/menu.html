@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescola Nicarágua</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="../Acesso/acesso.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Autoescola Nicarágua</h1>
+        <div class="user-area">
+            <div class="login-cadastro">
+                <a class="btn" href="../Login/login.html">Login</a>
+                <a class="btn" href="../Cadastro/cadastro.html">Cadastro</a>
+            </div>
+            <div id="user-info" class="user-info" style="display: none;">
+                <span id="user-name"></span>
+                <button id="logout-toggle" style="cursor: pointer;">&#9660;</button>
+                <div id="logout-options" style="display: none;">
+                    <button id="logout-btn">Deslogar</button>
+                </div>
+            </div>
+        </div>
+        <div class="acessibilidade">
+            <button id="modo-escuro-btn">Modo Escuro</button>
+            <button id="aumentar-fonte-btn">A+</button>
+            <button id="diminuir-fonte-btn">A-</button>
+        </div>
+    </header>
+
+    <nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="../Menu/menu.html">Início</a></li>
+                <li><a href="#">Cursos</a>
+                    <ul class="submenu">
+                        <li><a href="../Cursos/teorico.html">Teórico</a></li>
+                        <li><a href="../Cursos/pratico.html">Prático</a></li>
+                        <li><a href="../Cursos/simulador.html">Simulador</a></li>
+                    </ul>
+                <li><a href="../Contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </nav>
+    
+    <section class="info">
+        <h2>Sobre a nossa Autoescola</h2>
+        <p>Fundada há mais de 20 anos, a Autoescola Nicarágua é referência na Penha, Rio de Janeiro, pela excelência no ensino de direção. Nosso compromisso é formar motoristas conscientes e preparados para enfrentar os desafios do trânsito com segurança e responsabilidade.</p>
+        <p>Oferecemos uma infraestrutura moderna, veículos atualizados e instrutores altamente qualificados para garantir o melhor aprendizado, seja nas aulas teóricas ou práticas. Nossa missão é tornar o processo de habilitação mais fácil e seguro para todos os nossos alunos.</p>
+        <p>Localizada no coração da Penha, nossa autoescola é conhecida pela confiança e sucesso dos nossos alunos em seus exames de direção. Venha nos conhecer e faça parte dessa história!</p>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel-images">
+            <img src="Imagem/Autoescola.jpg" alt="Imagem 1">
+            <img src="Imagem/Carro.png" alt="Imagem 2">
+            <img src="Imagem/EAD.jpg" alt="Imagem 3">
+        </div>
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            const totalSlides = slides.length;
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+            document.querySelector('.carousel-images').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+
+    <script src="../Acessibilidade/acessibilidade.js"></script>
+    <br><br>
+    <footer>
+        <p>&copy; 2024 Autoescola Nicarágua. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

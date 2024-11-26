@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescola Nicarágua - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+<h1>Autoescola Nicarágua</h1>
+    <div class="user-area">
+        <div class="login-cadastro">
+            <a class="btn" href="../Login/login.html">Login</a>
+            <a class="btn" href="../Cadastro/cadastro.html">Cadastro</a>
+        </div>
+    </div>
+
+    <div class="acessibilidade">
+        <button id="modo-escuro-btn">Modo Escuro</button>
+        <button id="aumentar-fonte-btn">A+</button>
+        <button id="diminuir-fonte-btn">A-</button>
+    </div>
+</header>
+    </header>
+    <nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="../Menu/menu.html">Início</a></li>
+                <li><a href="#">Cursos</a>
+                    <ul class="submenu">
+                        <li><a href="../Cursos/teorico.html">Teórico</a></li>
+                        <li><a href="../Cursos/pratico.html">Prático</a></li>
+                        <li><a href="../Cursos/simulador.html">Simulador</a></li>
+                    </ul>
+                <li><a href="../Contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </nav>
+    <div class="container">
+        <div class="inner-container">   
+            <form>
+                <h1>Login do Usuário</h1>
+                <label for="Usuario">Nome do Usuário:</label>
+                <input type="text" id="Usuario" name="Usuario" required><br><br>
+
+                <label for="Senha">Senha:</label>
+                <input type="password" id="Senha" name="Senha" required><br><br>   
+
+                <div class="buttons">
+                    <button type="submit">Logar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+                <a href="../Esqueci a senha/esqueci.html" class="back-link">Esqueci a senha</a>
+                <a href="../Cadastro/cadastro.html" class="back-link">Criar conta</a>
+            </form>
+        </div>
+    </div>
+    <script src="../Acessibilidade/acessibilidade.js"></script>
+    <script src="../Login/login.js"></script>
+    <br><br><br>
+    <footer>
+        <p>&copy; 2024 Autoescola Nicarágua. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
